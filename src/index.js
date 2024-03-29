@@ -1,13 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import reportWebVitals from "./reportWebVitals";
+import Principal from "./Components/Index";
+import icono from "./Img/bxs-label.svg"
+import { Helmet } from "react-helmet";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Helmet>
+      <title>Abstract</title>
+      <link rel="icon" type="image/svg+xml" href={icono} />
+    </Helmet>
+    <Principal />
   </React.StrictMode>
 );
 

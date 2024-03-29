@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../Fonts/Lato-Regular.ttf");
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  padding-top: 2.5vh;
+}
+/*divLogo*/
+.divLogo {
+  padding-left: 4vw;
+  align-items: center;
+  display: flex;
+}
+.divLogo > span {
+  font-family: "Lato";
+  font-weight: bold;
+  color: white;
+  margin-left: 1vw;
+}
+/*---*/
+/*divSignIn*/
+.divSignIn {
+  display: flex;
+  align-items: center;
+  padding-right: 6vw;
+}
+.spanSignIn {
+  color: #818eff;
+  font-weight: bold;
+}
+/*---*/
+@media screen and (min-width: 500px) {
+  .imgLogoHead {
+    height: 5vw;
+  }
+  .divLogo > span ,.spanSignIn{
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .imgLogoHead {
+    height: 10vw;
+    transition: height 0.5s ease-in;
+  }
+  .divLogo > span {
+    font-size: 7vw;
+    transition: font-size 0.5s ease-in;
+  }
+  .spanSignIn {
+    font-size: 6vw;
+    transition: font-size 0.5s ease-in;
+  }
+}

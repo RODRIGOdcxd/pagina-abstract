@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../Fonts/Lato-Regular.ttf");
+}
+footer {
+  font-family: "Lato";
+  background-color: black;
+  display: flex;
+  flex-wrap: wrap;
+}
+.titulo > div {
+  display: inline-flex;
+  align-items: center;
+}
+.titulo > div > span {
+  color: white;
+  font-weight: bold;
+}
+.ulPanelFooter > li{
+  list-style: none;
+}
+.ulPanelFooter > li > a{
+  text-decoration: none;
+}
+.ulPanelFooter > li:first-child > a{
+  color: white;
+  font-weight: bold;
+}
+.ulPanelFooter > li:not(:first-child) > a{
+  color: gray;
+}
+.ulCopy > li{
+  list-style: none;
+  color: gray;
+}
+@media screen and (min-width: 500px) {
+  footer {
+    padding: 10vh 4vw;
+  }
+  /*Titulo*/
+  .titulo {
+    width: 50%;
+  }
+  .imgLogoFooter {
+    width: 5vw;
+  }
+  .titulo > div > span {
+    font-size: 2.5vw;
+  }
+  /*divPanelesFooter*/
+  .divPanelesFooter {
+    width: 12.5%;
+  }
+  .ulPanelFooter > li{
+    font-size: 2vh;
+  }
+  /*copy*/
+  .copy {
+    width: 100%;
+  }
+  .ulCopy > li{
+    font-size: 2vh;
+  }
+}
+@media screen and (max-width: 500px){
+  footer {
+    padding: 10vh 4vw;
+  }
+  /*Titulo*/
+  .titulo {
+    width: 100%;
+  }
+  .imgLogoFooter {
+    width: 20vw;
+  }
+  .titulo > div > span {
+    font-size: 10vw;
+  }
+  /*divPanelesFooter*/
+  .divPanelesFooter {
+    width: 50%;
+  }
+  .ulPanelFooter > li{
+    font-size: 3.5vh;
+    margin-bottom: 1vh;
+  }
+  /*copy*/
+  .copy {
+    margin-top: 5vh;
+    width: 100%;
+  }
+  .ulCopy > li{
+    font-size: 2vh;
+  }
+}

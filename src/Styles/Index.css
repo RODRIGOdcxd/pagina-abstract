@@ -1,0 +1,356 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../Fonts/Lato-Regular.ttf");
+}
+header {
+  height: 300vh;
+  font-family: "Lato";
+  position: relative;
+}
+
+.divVersion {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  z-index: 2;
+  border-bottom-left-radius: 10vw;
+  border-bottom-right-radius: 10vw;
+}
+
+.spanHeader1 {
+  color: white;
+  display: inline-block;
+  font-size: 5vw;
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  transform: translate(-5%, -40%);
+}
+
+.divButtons {
+  position: absolute;
+  top: 75%;
+  left: 5%;
+  transform: translate(-5%, -75%);
+}
+
+.btn {
+  box-sizing: border-box;
+  border: none;
+  background-color: #4c5fd5;
+  color: white;
+  font-size: 2vw;
+  border-radius: 0.5vw;
+  padding: 1.5vw;
+}
+
+.btn:nth-child(2) {
+  background-color: black;
+  border: 0.1vw solid white;
+  margin-left: 1.5vw;
+}
+
+.spanHeader2 {
+  position: absolute;
+  top: 85%;
+  left: 5%;
+  transform: translate(-5%, -85%);
+  color: white;
+  font-size: 1vw;
+}
+
+.imgHeader {
+  width: 60vw;
+  position: absolute;
+  left: 60%;
+  top: 40%;
+}
+
+.divSticky {
+  height: 130vh;
+  width: 100%;
+  background-color: lavender;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  z-index: 1;
+  border-bottom-left-radius: 10vw;
+  border-bottom-right-radius: 10vw;
+}
+
+.divTexto {
+  height: 50%;
+}
+
+.containerSticky {
+  position: sticky;
+  top: 80%;
+  font-size: 4vw;
+  padding: 0 10vw;
+}
+
+.containerSticky > p {
+  border-top: 1px solid #b3b8ee;
+  border-bottom: 1px solid #b3b8ee;
+}
+
+.containerTexto {
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10vw;
+}
+
+.containerChild {
+  box-sizing: border-box;
+  width: calc(100% / 3);
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh;
+  padding-right: 1vw;
+}
+
+.containerChild > img {
+  width: 3vw;
+}
+
+.containerChild > span {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.containerChild > p {
+  font-size: 1.2vw;
+}
+
+.divDesign {
+  z-index: 0;
+  height: 130vh;
+  width: 100%;
+  position: absolute;
+  top: 56.7%;
+}
+
+.De {
+  text-align: center;
+}
+
+.containerStickyDe {
+  box-sizing: border-box;
+  height: 50%;
+  padding: 0 3vw;
+  padding-top: 8vh;
+  padding-bottom: 13vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.containerChildDe {
+  box-sizing: border-box;
+  width: calc((100% / 3) - 1vw);
+  border: 0.3vh solid black;
+  display: grid;
+  grid-template-areas:
+    "logo logo"
+    "titulo contenido"
+    "subtitulo subtitulo";
+  grid-template-rows: 50% 35% 15%;
+  grid-template-columns: repeat(2, 50%);
+}
+
+.containerChildDe:hover {
+  animation: sombra 0.1s ease forwards;
+}
+
+.containerChildDe:not(:hover) {
+  animation: quitarSombra 0.1s ease forwards;
+}
+
+@keyframes sombra {
+  from {
+    transform: translate(0vw, 0vh);
+    box-shadow: none;
+  }
+  to {
+    transform: translate(-0.3vw, -1vh);
+    box-shadow: 0.3vw 1vh black;
+  }
+}
+
+@keyframes quitarSombra {
+  from {
+    transform: translate(-0.3vw, -1vh);
+    box-shadow: 0.3vw 1vh black;
+  }
+  to {
+    transform: translate(0vw, 0vh);
+    box-shadow: none;
+  }
+}
+
+.containerLogo {
+  grid-area: logo;
+  background-color: #e8dcd4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.3vh solid black;
+}
+
+.containerChildDe:nth-child(2) > .containerLogo {
+  background-color: #abc0bc;
+}
+
+.containerChildDe:nth-child(3) > .containerLogo {
+  background-color: #c6c9ef;
+}
+
+.containerLogo > img {
+  width: 35%;
+}
+
+.containerTitulo,
+.containerContenido,
+.containerSubTitulo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-left: 1.5vw;
+}
+
+.containerTitulo {
+  grid-area: titulo;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border-right: 0.3vh solid black;
+  border-bottom: 0.3vh solid black;
+}
+
+.containerContenido {
+  grid-area: contenido;
+  font-size: 0.9vw;
+  border-bottom: 0.3vh solid black;
+}
+
+.containerSubTitulo {
+  grid-area: subtitulo;
+  font-size: 1vw;
+}
+
+.containerSubTitulo > a {
+  text-decoration: none;
+  color: #4c5fd5;
+}
+
+.ProductosDesigns {
+  padding: 5vh 3vw;
+  background-color: #f6f7f7;
+}
+
+.ProductDesignTitulo {
+  height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ProductDesignChildTitulo > span:nth-of-type(1) {
+  font-size: 5vw;
+}
+
+.ProductDesignChildTitulo > span:nth-of-type(2) {
+  font-size: 1.5vw;
+}
+
+.ProductDesignPaneles {
+  display: flex;
+  justify-content: space-between;
+  height: 77vh;
+}
+
+.ProductDesignChildPanel {
+  height: 80%;
+  width: calc((100% / 3) - 1vw);
+  display: grid;
+  grid-template-areas:
+    "imagen imagen"
+    "titulo contenido"
+    "url url";
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: 50% 40% 10%;
+  border: 0.15vw solid black;
+  cursor: pointer;
+}
+
+.ProductDesignChildPanel:hover {
+  animation: sombra 0.3s ease forwards;
+}
+
+.ProductDesignChildPanel:not(:hover) {
+  animation: quitarSombra 0.3s ease forwards;
+}
+
+.ProductDesignChildPanelImage {
+  grid-area: imagen;
+  border-bottom: 0.15vw solid black;
+}
+
+.ProductDesignChildPanelImage > img {
+  width: 100%;
+  height: 100%;
+}
+
+.ProductDesignChildPanelTitulo {
+  grid-area: titulo;
+  padding: 1vw;
+  font-size: 2vw;
+  font-weight: bold;
+  border-right: 0.15vw solid black;
+}
+
+.ProductDesignChildPanelContent {
+  grid-area: contenido;
+  padding: 1vw;
+  font-size: 1.5vw;
+}
+
+.ProductDesignChildPanelUrl {
+  grid-area: url;
+  font-size: 1.5vw;
+  display: flex;
+  align-items: center;
+  padding-left: 1vw;
+  border-top: 0.15vw solid black;
+}
+
+.ProductDesignChildPanelUrl > a {
+  text-decoration: none;
+  color: #4c5fd5;
+}
+
+.ProductDesignButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 50vh;
+  background-color: #dadbf1;
+}
+
+.ProductDesignButton > span{
+  font-size: 3vw;
+  margin-bottom: 2.5vw;
+}
+
+.ProductDesignButton > button{
+  padding: 1vw;
+  font-size: 1.2vw;
+  background-color: #4c5fd5;
+  border: none;
+  border-radius: 0.5vw;
+  color: white;
+  cursor: pointer;
+}
